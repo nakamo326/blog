@@ -14,6 +14,7 @@
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.4",
+    "@fontsource/biz-udpgothic": "^5.0.17",
     "@iconify-json/mingcute": "^1.1.15",
     "astro": "^4.1.0",
     "astro-icon": "^1.0.2",
