@@ -1,17 +1,54 @@
 ---
-title: 'Blog 始めました'
+title: 'ブログ 始めました'
 description: 'とりあえず投稿'
 pubDate: '2024-01-08'
-updatedDate: '2024-01-08'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+# 2024年の目標
+今年の目標は3つ
+- アウトプットの量を増やす
+- 資格取得2つ
+- 健康増進
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## アウトプットの量を増やす
+アウトプットの質の向上、言語化の癖をつけたいなどの理由でブログを始めることにしました。
+この文章はそのファーストステップです。
+まあ飽きっぽいのですぐに忘れて来年になってそうではあるけど、できるだけ頑張るつもりではあります。
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+### このブログについて
+最近よく目にする、かつやりたいことにマッチしていると思うのでAstroで静的サイトを作ることにしました。
+ホスティングはCloudflare Pagesです。
+公式のサンプルにブログのテンプレートがあったのでそれをちまちまいじりながら改善していきたい所存です。
+現状で気になっているところとしては以下の通り。
+- styleがコンポーネントにベタ書き
+- ダークモードがない
+- RSS対応
+- 個別のPostへの共有リンク
+- linter、formatterの設定もろもろ
+  - [BiomeJSのDiscussions](https://github.com/biomejs/biome/discussions/1254)で議題にはなっているけど対応はこれからだと思うのでどうするかなーという感じ（eslint+prettierはちょっと面倒。。
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+フロントエンドの周りは分からないことが多いので勉強になりそうだなと思ってます。
+逆にCloudflare Pagesのホスティングは簡単すぎてちょっと拍子抜け。。
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## 資格取得
+去年に引き続き今年もSRE、インフラエンジニアとして働く予定です。
+スキルアップのためインフラ関連の資格の取得に挑戦したいなと思っています。
+現在取得を考えている資格は、
+- Azure Network Engineer Associate
+- Certified Kubernetes Administrator (CKA)
+の二つです。どちらも去年から取得しようという話はあったけどずるずる先延ばしにしていたので、今年中にはしっかり片付けたいです。
+
+## 健康増進
+食生活の変化や運動不足などもあって以前より体脂肪率が上がっている気がするので、改善を試みたいです。
+あとは睡眠時間の確保も目標です。
+とりあえずのタスクとして設定したいのは、
+- 体重測定の徹底
+  - Eufyの体重計で記録はとっているけど、寒いと特に忘れがちです。なので測定のタイミングをお風呂上がりに変えて改善できるか試すつもりです。
+- 食生活の改善
+  - 間食、炭水化物多めの食事をタンパク質多めに変えていきたいです。
+- 運動習慣
+  - とりあえずの運動習慣ということで食後の散歩を続けていきたいです。今はちょっと距離が短め（約3km）なので少し伸ばして4kmぐらいを毎日歩くことを目的に頑張りたいです。
+
+これらの目標の進捗についてもこのブログで更新していくつもりです。
+ではまた会う日まで。
