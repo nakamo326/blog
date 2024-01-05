@@ -1,7 +1,8 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'Blog 始めました'
+description: 'とりあえず投稿'
+pubDate: '2024-01-08'
+updatedDate: '2024-01-08'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
