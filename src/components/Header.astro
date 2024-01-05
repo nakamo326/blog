@@ -6,11 +6,11 @@ import { Icon } from "astro-icon/components";
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="social-links">
-      <div class="internal-links">
-        <HeaderLink href="/about">About</HeaderLink>
-      </div>
+    <div class="home-link">
+      <a href="/">{SITE_TITLE}</a>
+    </div>
+    <div class="links">
+      <HeaderLink href="/about">About</HeaderLink>
       <a href="https://twitter.com/nakamo326" target="_blank">
         <span class="sr-only">Follow Me on Twitter</span>
         <Icon name="mingcute:twitter-line" size={32} aria-hidden="true" />
@@ -33,14 +33,10 @@ import { Icon } from "astro-icon/components";
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
-  h2 {
+  .home-link {
     margin: 0;
     font-size: 1em;
-  }
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
+    font-weight: bold;
   }
   nav {
     display: flex;
@@ -54,16 +50,15 @@ import { Icon } from "astro-icon/components";
     text-decoration: none;
   }
   nav a.active {
-    text-decoration: none;
     border-bottom-color: var(--accent);
   }
-  .social-links,
-  .social-links a {
+  .links,
+  .links a {
     display: flex;
   }
   @media (max-width: 720px) {
-    .social-links {
-      display: none;
+    nav a {
+      padding: 0.5em 0.5em;
     }
   }
 </style>
