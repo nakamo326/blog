@@ -2,6 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "@fontsource/biz-udpgothic/400.css";
+import "@fontsource/biz-udpgothic/700.css";
 
 const { title, description } = Astro.props;
 ---
@@ -14,5 +16,10 @@ const { title, description } = Astro.props;
     <Header />
     <slot />
     <Footer />
+    <style>
+      body {
+        font-family: "Biz UDPGothic", sans-serif;
+      }
+    </style>
   </body>
 </html>
