@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nakamo326.com/sitemap-index.xml
