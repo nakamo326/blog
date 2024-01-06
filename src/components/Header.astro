@@ -4,12 +4,12 @@ import { SITE_TITLE } from '../consts';
 import { Icon } from 'astro-icon/components';
 ---
 
-<header>
-  <nav>
-    <div class="home-link">
+<header class="m-0 px-1 bg-white">
+  <nav class="flex items-center justify-between">
+    <div class="m-0 text-xl font-bold">
       <a href="/">{SITE_TITLE}</a>
     </div>
-    <div class="links">
+    <div class="flex">
       <HeaderLink href="/about">About</HeaderLink>
       <a href="https://twitter.com/nakamo326" target="_blank">
         <span class="sr-only">Follow Me on Twitter</span>
@@ -27,44 +27,14 @@ import { Icon } from 'astro-icon/components';
   </nav>
 </header>
 <style>
-  header {
-    margin: 0;
-    padding: 0 1em;
-    background: white;
-    box-shadow: 0 2px 8px rgb(var(--black) 5%);
-  }
-
-  .home-link {
-    margin: 0;
-    font-size: 1em;
-    font-weight: bold;
-  }
-
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
   nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
+    @apply md:px-3 md:py-4 sm:px-1 sm:py-2
+      text-black
+      border-b-4 border-transparent
+      no-underline;
   }
 
   nav a.active {
-    border-bottom-color: var(--accent);
-  }
-
-  .links,
-  .links a {
-    display: flex;
-  }
-
-  @media (width <= 720px) {
-    nav a {
-      padding: 0.5em;
-    }
+    @apply border-accent;
   }
 </style>
