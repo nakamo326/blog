@@ -1,12 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
+import Layout from '../layouts/Layout.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts = (await getCollection('blog')).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -17,12 +15,7 @@ const posts = (await getCollection("blog")).sort(
           posts.map((post) => (
             <li>
               <a href={`/${post.slug}/`}>
-                <img
-                  width={720}
-                  height={360}
-                  src={post.data.heroImage}
-                  alt=""
-                />
+                <img width={720} height={360} src={post.data.heroImage} alt="" />
                 <h4 class="title">{post.data.title}</h4>
                 <p class="date">
                   <FormattedDate date={post.data.pubDate} />
@@ -83,7 +76,6 @@ const posts = (await getCollection("blog")).sort(
   ul li:first-child .title {
     font-size: 2.369rem;
   }
-
 
   ul li a {
     display: block;

@@ -1,9 +1,11 @@
 {
   "stylelint.validate": ["astro", "css"],
+  "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.stylelint": true
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit"
     }
   }
 }
