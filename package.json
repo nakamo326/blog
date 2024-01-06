@@ -27,6 +27,8 @@
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.0",
     "postcss-html": "^1.5.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
     "stylelint": "^16.1.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^36.0.0"
