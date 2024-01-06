@@ -1,12 +1,9 @@
 {
-  "stylelint.validate": [
-      "astro",
-      "css",
-  ],
+  "stylelint.validate": ["astro", "css"],
   "[astro]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
       "source.fixAll.stylelint": true
     }
-  },
+  }
 }
