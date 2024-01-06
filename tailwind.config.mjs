@@ -8,6 +8,8 @@ export default {
         'accent-dark': 'var(--accent-dark)',
         black: 'var(--black)',
         gray: 'var(--gray)',
+        'gray-light': 'var(--gray-light)',
+        'gray-light-50': 'rgb(var(--gray-light) 50%)',
       },
     },
   },
