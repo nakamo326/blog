@@ -7,7 +7,9 @@ import HeaderIcon from './HeaderIcon.astro';
 <header class="m-0 px-1 bg-white">
   <nav class="flex items-center justify-between">
     <div class="m-0 text-xl font-bold">
-      <a href="/">{SITE_TITLE}</a>
+      <a class="md:px-3 md:py-4 sm:px-1 sm:py-2 text-black hover:text-black" href="/"
+        >{SITE_TITLE}</a
+      >
     </div>
     <div class="flex">
       <HeaderLink href="/about">About</HeaderLink>
@@ -29,15 +31,3 @@ import HeaderIcon from './HeaderIcon.astro';
     </div>
   </nav>
 </header>
-<style>
-  nav a {
-    @apply md:px-3 md:py-4 sm:px-1 sm:py-2
-      text-black
-      border-b-4 border-transparent
-      no-underline;
-  }
-
-  nav a.active {
-    @apply border-accent;
-  }
-</style>

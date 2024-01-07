@@ -4,15 +4,7 @@ import { Icon } from 'astro-icon/components';
 const { href, iconName, srText } = Astro.props;
 ---
 
-<a href={href} target="_blank">
+<a class="md:px-3 md:py-4 sm:px-1 sm:py-2 text-black hover:text-black" href={href} target="_blank">
   <span class="sr-only">{srText}</span>
   <Icon name={iconName} size={32} aria-hidden="true" />
 </a>
-<style>
-  a {
-    @apply md:px-3 md:py-4 sm:px-1 sm:py-2
-      text-black
-      border-b-4 border-transparent
-      no-underline;
-  }
-</style>

@@ -3,23 +3,22 @@ import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'a'>;
 
-const { href, class: className, ...props } = Astro.props;
+const { href, ...props } = Astro.props;
 
 const { pathname } = Astro.url;
 const isActive = href === pathname || href === pathname.replace(/\/$/, '');
+const normalStyle = 'border-transparent';
+const activeStyle = 'underline font-bold border-accent';
+const style = isActive ? activeStyle : normalStyle;
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a
+  href={href}
+  class:list={[
+    'md:px-3 md:py-4 sm:px-1 sm:py-2 text-black hover:text-black border-b-4 inline-block no-underline',
+    style,
+  ]}
+  {...props}
+>
   <slot />
 </a>
-<style>
-  a {
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  a.active {
-    font-weight: bolder;
-    text-decoration: underline;
-  }
-</style>
