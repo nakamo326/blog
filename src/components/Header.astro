@@ -1,7 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
-import { Icon } from 'astro-icon/components';
+import HeaderIcon from './HeaderIcon.astro';
 ---
 
 <header class="m-0 px-1 bg-white">
@@ -11,18 +11,21 @@ import { Icon } from 'astro-icon/components';
     </div>
     <div class="flex">
       <HeaderLink href="/about">About</HeaderLink>
-      <a href="https://twitter.com/nakamo326" target="_blank">
-        <span class="sr-only">Follow Me on Twitter</span>
-        <Icon name="mingcute:twitter-line" size={32} aria-hidden="true" />
-      </a>
-      <a href="https://github.com/nakamo326" target="_blank">
-        <span class="sr-only">Follow Me on GitHub</span>
-        <Icon name="mingcute:github-line" size={32} aria-hidden="true" />
-      </a>
-      <a href="https://nakamo326.com/rss.xml" target="_blank">
-        <span class="sr-only">Feed RSS</span>
-        <Icon name="mingcute:rss-2-line" size={32} aria-hidden="true" />
-      </a>
+      <HeaderIcon
+        href="https://twitter.com/nakamo326"
+        iconName="mingcute:twitter-line"
+        srText="Follow Me on Twitter"
+      />
+      <HeaderIcon
+        href="https://github.com/nakamo326"
+        iconName="mingcute:github-line"
+        srText="Follow Me on GitHub"
+      />
+      <HeaderIcon
+        href="https://nakamo326.com/rss.xml"
+        iconName="mingcute:rss-2-line"
+        srText="Feed RSS"
+      />
     </div>
   </nav>
 </header>
