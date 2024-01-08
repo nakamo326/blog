@@ -4,12 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: 'var(--accent)',
-        'accent-dark': 'var(--accent-dark)',
-        black: 'var(--black)',
-        gray: 'var(--gray)',
-        'gray-light': 'var(--gray-light)',
-        'gray-light-50': 'rgb(var(--gray-light) 50%)',
+        accent: '#2337ff',
+        'accent-dark': '#000d8a',
+        black: '#0f1219',
+        gray: '#60739f',
+        'gray-light': '#e5e9f0',
       },
     },
   },
