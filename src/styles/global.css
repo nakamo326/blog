@@ -16,24 +16,15 @@
 }
 
 body {
-  font-family: "Biz UDPGothic", sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
-  background-size: 100% 600px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
-  font-size: 20px;
-  line-height: 1.7;
+  @apply bg-gradient-to-b from-gray-light/50 to-white bg-no-repeat
+    text-gray-dark break-words 
+    md:text-lg sm:text-base
+    text-left
 }
 
 main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
+  @apply m-auto md:px-4 md:py-12 sm:p-4
+    w-[720px] max-w-[96%]
 }
 
 h1,
@@ -127,12 +118,3 @@ hr {
   border-top: 1px solid rgb(var(--gray-light));
 }
 
-@media (width <= 720px) {
-  body {
-    font-size: 18px;
-  }
-
-  main {
-    padding: 1em;
-  }
-}
