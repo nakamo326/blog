@@ -9,6 +9,7 @@ export default {
         black: '#0f1219',
         gray: '#60739f',
         'gray-light': '#e5e9f0',
+        'gray-dark': '#222939',
       },
     },
   },
