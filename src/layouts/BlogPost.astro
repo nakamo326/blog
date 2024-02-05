@@ -12,17 +12,27 @@ const { title, description, pubDate, updatedDate, heroImage } = props;
 <Layout title={title} description={description}>
   <main class="w-[96%] max-w-[100%] m-auto md:px-4 md:py-12 sm:p-4">
     <article>
-      <div class="hero-image">
-        {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+      <div class="w-full">
+        {
+          heroImage && (
+            <img
+              class="block my-0 mx-auto rounded-xl shadow-xl shadow-gray/35"
+              width={1020}
+              height={510}
+              src={heroImage}
+              alt=""
+            />
+          )
+        }
       </div>
-      <div class="prose">
-        <div class="title">
-          <h1>{title}</h1>
-          <div class="date">
+      <div class="w-[720px] max-w-[96%] m-auto p-5 text-gray-dark">
+        <div class="mb-5 py-5 text-center">
+          <h1 class="mb-5">{title}</h1>
+          <div class="text-gray mb-3">
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
-                <div class="last-updated-on">
+                <div class="italic">
                   Last updated on <FormattedDate date={updatedDate} />
                 </div>
               )
@@ -35,44 +45,3 @@ const { title, description, pubDate, updatedDate, heroImage } = props;
     </article>
   </main>
 </Layout>
-
-<style>
-  .hero-image {
-    width: 100%;
-  }
-
-  .hero-image img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
-  }
-
-  .prose {
-    width: 720px;
-    max-width: calc(100% - 2em);
-    margin: auto;
-    padding: 1em;
-    color: rgb(var(--gray-dark));
-  }
-
-  .title {
-    margin-bottom: 1em;
-    padding: 1em 0;
-    text-align: center;
-    line-height: 1;
-  }
-
-  .title h1 {
-    margin: 0 0 0.5em;
-  }
-
-  .date {
-    margin-bottom: 0.5em;
-    color: rgb(var(--gray));
-  }
-
-  .last-updated-on {
-    font-style: italic;
-  }
-</style>
