@@ -86,16 +86,16 @@ img {
 }
 
 code {
-  @apply py-1 px-2 bg-gray-light rounded-sm
+  @apply py-1 px-2 rounded-sm
 }
 
 pre {
   @apply p-6 rounded-lg font-mono
 }
 
-pre > code {
+/* pre > code {
   all: unset;
-}
+} */
 
 blockquote {
   @apply border-l-4 border-accent pl-4 m-0 text-xl
