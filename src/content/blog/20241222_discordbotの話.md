@@ -1,17 +1,23 @@
-# DiscordでMinecraft用のEC2サーバーを操作するBotを作った話
+---
+title: "DiscordでMinecraft用のEC2サーバーを操作するBotを作った話"
+description: "Lambdaで実装したDiscord BotでEC2を管理、TerraformでIaC、esbuildでビルド、Biomeでformat, lint"
+pubDate: "2024-12-22"
+heroImage: "/blog-placeholder-4.jpg"
+---
 
 ## Intro
- ブログを作って満足で１年が経過しそうなので、滑り込みで今年の６月ごろに作ったDiscord Botの話をさらっと紹介します。
+ ブログを作って満足で１年が経過しそうなので、滑り込みで今年の６月ごろに作ったDiscord Botの話をさらっと紹介します。  
 （流石に１年で記事一本は寂しいですしね
 
-リポジトリはこちら
-https://github.com/nakamo326/discord-mc2-bot
+リポジトリはこちら  
+[https://github.com/nakamo326/discord-mc2-bot](https://github.com/nakamo326/discord-mc2-bot)
 
-当時Minecraftをやっており、せっかくなのでAWSの勉強も兼ねてEC2でサーバー構築をしました。（サーバーの構築については割愛）
-使わない時はインスタンスを停止しておきたいのですが、毎回ポータルからぽちぽちするのが面倒になったのでDiscord Bot経由で操作したいというのが主旨になります。
+当時Minecraftをやっており、せっかくなのでAWSの勉強も兼ねてEC2でサーバー構築をしました。（サーバーの構築については割愛）  
+使わない時はインスタンスを停止しておきたいのですが、毎回ポータルからぽちぽちするのが面倒になったのでDiscord Bot経由で操作したいというのが主旨になります。  
 なるべくコストはかけたくないのでDiscord BotはAWS Lambdaで実装しました。
 
 ## 想定読者
+
 - Minecraftサーバーをこまめに起動、停止したい人
 - AWS Lambdaを利用したDiscord Botの運用に興味のある人
 - Terraformを利用したAWS LambdaのIaCに興味がある人
@@ -28,15 +34,18 @@ https://github.com/nakamo326/discord-mc2-bot
 （例: 自動停止のLambdaは、サーバー状態を確認するLambdaをinvokeし、起動状態のサーバーにプレイヤーがいない時、サーバーを停止するLambdaをinvokeするなど）
 
 構成を図にするとこんな感じです。
-![[posts/20241222/構成図.png]]
 
-## 良かったこといくつか
+![構成図](/posts/20241222/構成図.png)
+
+## 良かったこといくつかを紹介
+
+
 ### TerraformでLambdaのデプロイが簡単
 AWSのリソース管理にはTerraformを利用しました。
 Data Sourceの`archive_file`を使うことで、生成されたzipファイルのハッシュに差分があると、Lambdaのリソースも更新がトリガーされます。
 Lambdaのコードを修正、デプロイのサイクルが回しやすく開発体験が良かったです。
 
-```HCL
+```hcl
 
 data "archive_file" "source_code_start_ec2" {
   type        = "zip"
@@ -103,6 +112,6 @@ prettierはともかくeslintは設定むずかしすぎませんか？
 Minecraftだけに限らず、コスト効果の高いEC2の管理インターフェイスとして活用できるのではと思っています。
 良かったら使ってみてください。感想待ってます。
 
-思い出しながらの記事になってしまったので次は忘れる前に書きたいなという所存です。
-CPUの作り方に沿って自作CPUを会社の友人と作成しているので、キリのいいところでまとめようと思っています。
+思い出しながらの記事になってしまったので次は忘れる前に書きたいなという所存です。  
+CPUの作り方に沿って自作CPUを会社の友人と作成しているので、キリのいいところでまとめようと思っています。  
 それでは、またいつか
